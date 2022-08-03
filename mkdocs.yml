@@ -6,5 +6,7 @@ plugins:
       # (optional) tells multirepo to cleanup the temporary directory after site is built.
       cleanup: true
       repos:
-        - section: Monorepo Multi Docs
-          import_url: https://github.com/bmarcosps/test-actions/
+        - section: Test Actions
+          import_url: https://github.com/bmarcosps/test-actions?branch={dev}
+theme:
+  name: material
