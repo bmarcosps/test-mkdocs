@@ -1,0 +1,10 @@
+site_name: Breakout Docs
+
+plugins:
+  - search
+  - multirepo:
+      # (optional) tells multirepo to cleanup the temporary directory after site is built.
+      cleanup: true
+      repos:
+        - section: Monorepo Multi Docs
+          import_url: https://github.com/bmarcosps/test-actions/
