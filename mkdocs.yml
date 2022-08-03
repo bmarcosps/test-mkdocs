@@ -7,9 +7,9 @@ plugins:
       cleanup: true
       repos:
         - section: Test Actions
-          import_url: https://github.com/bmarcosps/test-actions?branch={dev}
+          import_url: git@github.com:{bmarcosps}/{test-actions}.git?branch={dev}
         - section: Simple API
-          import_url: https://github.com/bmarcosps/simple-api?branch={simple-typescript}
+          import_url: git@github.com:{bmarcosps}/{simple-api}.git?branch={simple-typescript}
 
 theme:
   name: material
