@@ -7,15 +7,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-python@v4
+     - name: Build
+        uses: Tiryoh/actions-mkdocs@latest
         with:
-          python-version: '3.8'
-      - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
-      - name: Build
-        run: |
-          mkdocs build
+          mkdocs_version: 'latest' # option
+          requirements: 'requirements.txt' # option
+          configfile: 'mkdocs.yml' # option
       - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
