@@ -10,15 +10,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build
-        uses: actions/setup-python@v4
+        uses: bmarcosps/actions-mkdocs@v0
         with:
-          python-version: '3.8'
-      - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
-      - name: Build
-        run: |
-          mkdocs build
+          mkdocs_version: 'latest' # option
+          requirements: 'requirements.txt' # option
+          configfile: 'mkdocs.yml' # option
       - name: Print
         run: |
           ls -la
