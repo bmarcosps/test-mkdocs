@@ -9,20 +9,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Build
-        uses: Tiryoh/actions-mkdocs@v0
-        with:
-          mkdocs_version: 'latest' # option
-          requirements: 'requirements.txt' # option
-          configfile: 'mkdocs.yml' # option
-      - name: Print
-        run: |
-          ls -la
-          cd site
-          ls -la
-          cd ..
-          cd ..
-          ls -la
+        - name: Build
+          uses: actions/setup-python@v4
+          with:
+            python-version: '3.8'
+        - name: Install dependencies
+          run: |
+            pip install -r requirements.txt
+        - name: Build
+          run: |
+            mkdocs build
+        - name: Print
+          run: |
+            ls -la
+            cd site
+            ls -la
+            cd ..
+            cd ..
+            ls -la
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           branch: main
