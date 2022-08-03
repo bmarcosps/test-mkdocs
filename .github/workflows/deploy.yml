@@ -9,6 +9,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Print Before
+        run: |
+          ls -la
+          cd site
+          ls -la
+          cd ..
+          cd docs
+          ls -la
+          cd ..
+          cd ..
+          ls -la
       - name: Build
         uses: bmarcosps/actions-mkdocs@v0.2
         with:
