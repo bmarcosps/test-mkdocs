@@ -16,7 +16,13 @@ jobs:
           requirements: 'requirements.txt' # option
           configfile: 'mkdocs.yml' # option
       - name: Print
-        run: ls -la
+        run: |
+          ls -la
+          cd site
+          ls -la
+          cd ..
+          cd ..
+          ls -la
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           branch: main
