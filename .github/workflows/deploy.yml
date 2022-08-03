@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build
-        uses: Tiryoh/actions-mkdocs@latest
+        uses: Tiryoh/actions-mkdocs@v0
         with:
           mkdocs_version: 'latest' # option
           requirements: 'requirements.txt' # option
