@@ -40,13 +40,7 @@ http {
 		root /site;
 
         location / {
-            mruby_set $fallback /app/bin/config/lib/ngx_mruby/routes_fallback.rb cache;
-    
-            try_files $uri $uri/ $fallback;
-        }
-
-        location @404 {
-          return 404;
+            root site/;
         }
 	}
 }
