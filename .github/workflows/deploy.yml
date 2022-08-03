@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build
-        uses: bmarcosps/actions-mkdocs@v0
+        uses: bmarcosps/actions-mkdocs
         with:
           mkdocs_version: 'latest' # option
           requirements: 'requirements.txt' # option
