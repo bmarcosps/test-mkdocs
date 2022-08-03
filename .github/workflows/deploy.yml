@@ -12,9 +12,6 @@ jobs:
       - name: Print Before
         run: |
           ls -la
-          cd site
-          ls -la
-          cd ..
           cd docs
           ls -la
           cd ..
