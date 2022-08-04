@@ -7,7 +7,7 @@ plugins:
       cleanup: true
       repos:
         - section: Test Actions
-          import_url: https://github.com/bmarcosps/test-actions
+          import_url: https://github.com/bmarcosps/test-actions?branch={dev}
 
 theme:
   name: material
