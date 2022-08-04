@@ -10,7 +10,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     env:
-      AccessToken: ${{ secrets.GITHUB_TOKEN }}
+      AccessToken: ${{ secrets.PAT_TOKEN }}
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v4
